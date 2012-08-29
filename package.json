@@ -1,6 +1,6 @@
 {
   "name": "look",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Performance profiler based on nodetime",
   "keywords": [
     "profiler",
@@ -34,6 +34,6 @@
     "socket.io": "0.9.10"
   },
   "engines": {
-    "node": ">= 0.6.0"
+    "node": ">= 0.8.0"
   }
 }
