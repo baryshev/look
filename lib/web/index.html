@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8" />
+		<title>look</title>
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+		<!--[if lt IE 9]>
+		<script src="/js/html5.js"></script>
+		<![endif]-->
+
+		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/css/look.css" rel="stylesheet" />
+
+		<script src="/js/jquery-1.8.0.min.js"></script>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/flot/jquery.flot.js"></script>
+		<script src="/flot/jquery.flot.resize.js"></script>
+		<script src="/flot/jquery.flot.js"></script>
+		<script src="/js/jquery.sortElements.js"></script>
+		<script src="/js/underscore-min.js"></script>
+		<script src="/js/backbone-min.js"></script>
+
+		<script src="/js/look/look.compatibility.js"></script>
+		<script src="/js/look/look.core.js"></script>
+		<script src="/js/look/look.samples.js"></script>
+		<script src="/js/look/look.metrics.js"></script>
+		<script src="/js/look/look.cpu.js"></script>
+		<script src="/js/look/look.memory.js"></script>
+		<script src="/js/look/look.routing.js"></script>
+		<script src="/js/look/look.socket.js"></script>
+		<script src="/js/look/look.init.js"></script>
+
+		<script src="/kendoui/js/kendo.web.min.js"></script>
+		<link href="/kendoui/styles/kendo.common.min.css" rel="stylesheet" />
+		<link href="/kendoui/styles/kendo.default.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script type="text/x-kendo-template" id="tree-template"><div class="tree"></div></script>
+		<div class="container">
+			<div class="navbar" style="margin-top: 20px;">
+				<div class="navbar-inner">
+					<a class="brand" href="/">look</a>
+					<ul class="nav">
+						<li id="transactions-link"><a href="#transactions" onclick="return Look.Router.go('transactions');">Transactions</a></li>
+						<li id="metrics-link"><a href="#metrics" onclick="return Look.Router.go('metrics');">Metrics</a></li>
+						<li id="cpu-link"><a href="#cpu" onclick="return Look.Router.go('cpu');">CPU profiler</a></li>
+						<li id="memory-link"><a href="#memory" onclick="return Look.Router.go('memory');">Memory profiler</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="transactions-page" style="display: none;">
+				<div class="well" id="filter">
+					<button id="transactions-start-stop" class="k-button">Start monitoring</button>
+
+					<div style="margin: 10px 0;"><label>Only profile transations, where:</label></div>
+
+					<div class="form-inline">
+						<select class="span2" id="filter-key"><option value="*">any field</option></select>
+						<select class="span2" id="filter-operator">
+							<option value="match">matches</option>
+							<option value="==">is equal to</option>
+							<option value="!=">is not equal to</option>
+							<option value="&gt;">is greater than</option>
+							<option value="&lt;">is less than</option>
+						</select>
+
+						<input type="text" class="span2" id="filter-value" placeholder="regex" />
+						<button class="btn" id="filter-apply">Apply</button>
+						<button class="btn" id="filter-reset">Reset</button>
+					</div>
+				</div>
+
+				<div class="tabbable">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#tab-requests" data-toggle="tab">Requests</a></li>
+						<li><a href="#tab-operations" data-toggle="tab">Operations</a></li>
+						<li><a href="#tab-errors" data-toggle="tab">Errors</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab-requests"><div class="k-content"><div id="requests-grid"></div></div></div>
+						<div class="tab-pane" id="tab-operations"><div class="k-content"><div id="operations-grid"></div></div></div>
+						<div class="tab-pane" id="tab-errors"><div class="k-content"><div id="errors-grid"></div></div></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="metrics-page" style="display: none;">
+				<div class="tabbable" id="source-tabs">
+					<ul class="nav nav-tabs"></ul>
+					<div class="tab-content" style="overflow: visible;"></div>
+				</div>
+			</div>
+
+			<div id="cpu-page" style="display: none;"><div class="k-content"><div id="cpu-grid"></div></div></div>
+
+			<div id="memory-page" style="display: none;"><div class="k-content"><div id="memory-grid"></div></div></div>
+		</div>
+		<script src="/bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>
