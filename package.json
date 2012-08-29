@@ -21,7 +21,7 @@
     "name": "Vadim M. Baryshev",
     "email": "vadimbaryshev@gmail.com"
   },
-  {
+  "repository": {
     "type": "git",
     "url": "git://github.com/baryshev/look.git"
   },
