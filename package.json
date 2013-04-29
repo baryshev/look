@@ -1,6 +1,6 @@
 {
 	"name": "look",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Performance profiler based on nodetime",
 	"keywords": [
 		"profiler",
@@ -29,9 +29,9 @@
 	"dependencies": {
 		"nodetime": "0.4.6",
 		"clusterhub": "0.2.1",
-		"connect": "2.4.4",
-		"connect-route": "0.1.2",
-		"socket.io": "0.9.10"
+		"connect": "2.7.4",
+		"connect-route": "0.1.3",
+		"socket.io": "0.9.14"
 	},
 	"engines": {
 		"node": ">= 0.8.0"
