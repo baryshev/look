@@ -1,7 +1,7 @@
 # Look
 
 Look is a perfomance profiler for node.js applications based on [nodetime](https://github.com/nodetime/nodetime).
-Look don't send any data outside your server.
+Look doesn't send any data outside your server.
 
 # Installation
 
