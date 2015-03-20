@@ -1,39 +1,40 @@
 {
-	"name": "look",
-	"version": "0.1.3",
-	"description": "Performance profiler based on nodetime",
-	"keywords": [
-		"profiler",
-		"profiling",
-		"tracing",
-		"cpu",
-		"heap",
-		"performance",
-		"instrumentation",
-		"response time",
-		"performance",
-		"bottlenecks",
-		"monitoring",
-		"analytics",
-		"metrics"
-	],
-	"author": {
-		"name": "Vadim M. Baryshev",
-		"email": "vadimbaryshev@gmail.com"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/baryshev/look.git"
-	},
-	"main": "index",
-	"dependencies": {
-		"nodetime": "0.4.6",
-		"clusterhub": "0.2.1",
-		"connect": "2.7.4",
-		"connect-route": "0.1.3",
-		"socket.io": "0.9.14"
-	},
-	"engines": {
-		"node": ">= 0.8.0"
-	}
+  "name": "look",
+  "version": "0.1.3",
+  "description": "Performance profiler based on nodetime",
+  "keywords": [
+    "profiler",
+    "profiling",
+    "tracing",
+    "cpu",
+    "heap",
+    "performance",
+    "instrumentation",
+    "response time",
+    "performance",
+    "bottlenecks",
+    "monitoring",
+    "analytics",
+    "metrics"
+  ],
+  "author": {
+    "name": "Vadim M. Baryshev",
+    "email": "vadimbaryshev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/baryshev/look.git"
+  },
+  "main": "index",
+  "dependencies": {
+    "basic-auth": "^1.0.0",
+    "clusterhub": "0.2.1",
+    "connect": "2.7.4",
+    "connect-route": "0.1.3",
+    "nodetime": "0.4.6",
+    "socket.io": "0.9.14"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  }
 }
