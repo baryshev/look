@@ -21,9 +21,9 @@ Look will be started as a web server on port `5959`, you can access it by pointi
 
   - `port` Listening port, defaulting to `5959`
   - `host` Listening host, defaulting to `0.0.0.0`
-  - `credential` string of "username:password", if present enable http basic authentication, defaulting null
+  - `user` string of "username:password", if present enable http basic authentication, defaulting null
   - `real` string for realm in basic auth, defaulting `mydomain`
 
 ```js
-require('look').start(3000, '127.0.0.1', 'simple:block', 'example.com');
+require('look').start(3000, '127.0.0.1', 'username:password', 'example.org');
 ```
